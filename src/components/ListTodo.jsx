@@ -65,10 +65,10 @@ export default function TodoList() {
               <input
                 value={editedValue}
                 onChange={(e) => setEditedValue(e.target.value)}
-                className={`text-md sm:text-lg lg:text-xl font-semibold bg-transparent sm:w-[23rem] outline-none`}
+                className={`text-md  w-[8rem]  sm:text-lg lg:text-xl font-semibold bg-transparent sm:w-[23rem] outline-none`}
               />
             ) : (
-              <div className={`text-md sm:text-xl lg:text-xl font-semibold bg-transparent sm:w-[23rem] outline-none ${item.completed ? 'line-through' : ''}`}>
+              <div className={`text-md sm:text-lg lg:text-xl font-semibold bg-transparent sm:w-[23rem] outline-none ${item.completed ? 'line-through' : ''}`}>
                 {item.value}
               </div>
             )}
