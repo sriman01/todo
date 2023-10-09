@@ -53,7 +53,7 @@ export default function TodoList() {
   return (
     <>
       {todo.map((item) => (
-        <div key={item.id} className='flex justify-between py-2 lg:gap-20 px-4 mt-4 bg-pink-400 w-[23rem] sm:[30rem] md:w-[40rem] rounded-md'>
+        <div key={item.id} className='flex justify-between py-2 md:gap-20 px-4 mt-4 bg-pink-400 w-[20rem] sm:[30rem] md:w-[40rem] rounded-md'>
           <div className='flex gap-1 md:gap-3 justify-between items-center'>
             <input
               className='w-[1rem] md:w-[1.3rem] h-[1.3rem] cursor-pointer'
@@ -65,10 +65,10 @@ export default function TodoList() {
               <input
                 value={editedValue}
                 onChange={(e) => setEditedValue(e.target.value)}
-                className={`text-md sm:text-lg lg:text-xl font-semibold bg-transparent  md:w-[23rem] outline-none`}
+                className={`text-md sm:text-lg lg:text-xl font-semibold bg-transparent sm:w-[23rem] outline-none`}
               />
             ) : (
-              <div className={`text-md sm:text-xl lg:text-xl font-semibold bg-transparent  md:w-[23rem] outline-none ${item.completed ? 'line-through' : ''}`}>
+              <div className={`text-md sm:text-xl lg:text-xl font-semibold bg-transparent sm:w-[23rem] outline-none ${item.completed ? 'line-through' : ''}`}>
                 {item.value}
               </div>
             )}
