@@ -36,24 +36,11 @@ export default function TodoList() {
   
 
 
-  useEffect(() => {
-    const localtodo = JSON.parse(localStorage.getItem('todos'));
-    if(localtodo && localtodo.length > 0){
-      setTodo(localtodo)
-    }
-  }, [])
-
-
-  useEffect(() => {
-    localStorage.setItem('todos', JSON.stringify(todo))
-  }, [todo])
-
-
 
   return (
     <>
       {todo.map((item) => (
-        <div key={item.id} className='flex justify-between py-2 md:gap-20 px-4 mt-4 bg-pink-400 w-[20rem] sm:[30rem] md:w-[40rem] rounded-md'>
+        <div key={item.id} className='flex justify-between py-2 md:gap-10 px-4 mt-4  w-[20rem] sm:[30rem] md:w-[40rem] rounded-md'>
           <div className='flex gap-1 md:gap-3 justify-between items-center'>
             <input
               className='w-[1rem] md:w-[1.3rem] h-[1.3rem] cursor-pointer'
