@@ -10,7 +10,7 @@ export default function AddTodo() {
     const [show, setShow] = useState(false);
 
     const todoAdder = () => {
-        let id = v4();
+        let id = Date.now();
         if (todoItem !== '') {
             setTodo([...todo, { id: id, value: todoItem, completed: false }]);
             setTodoItem('')
@@ -28,16 +28,16 @@ export default function AddTodo() {
     return (
         <div className='mt-10   w-[22rem]'>
           {show ? 
-            <div>
+            <div className=''>
                 <input
                     value={todoItem}
                     onChange={(e) => setTodoItem(e.target.value)}
-                    className=' bg-[#9999A3] px-2 py-2 sm:px-4 rounded-l-lg sm:text-xl outline-none text-slate-200'
+                    className='  bg-[#9999A3] px-2 py-2 sm:px-4 rounded-l-lg sm:text-xl outline-none text-white placeholder-white w-[70%] '
                     placeholder='Write To Do...!'
                     type='text' />
                  <button
                     onClick={todoAdder}
-                    className=' bg-[#2F69FE] py-2 px-5 rounded-r-lg sm:text-xl font-bold'
+                    className=' bg-[#2F69FE] py-2 px-5 rounded-r-lg sm:text-xl font-bold w-[30%] '
                   >
                     ADD
                 </button>
